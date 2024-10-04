@@ -1,0 +1,87 @@
+TASK- 1
+SELECT last_name, salary
+FROM employees
+WHERE salary > 12000;
+
+
+TASK- 2
+SELECT last_name, department_id
+FROM employees
+WHERE employee_id = 176;
+
+
+TASK- 3
+SELECT last_name, salary
+FROM employees
+WHERE salary NOT BETWEEN 5000 and 12000;
+
+
+TASK- 4
+SELECT last_name, job_id, hire_date
+FROM employees
+WHERE last_name IN( 'Matos', 'Taylor')
+ORDER BY hire_date;
+
+
+TASK- 5
+SELECT last_name, department_id
+FROM employees
+WHERE department_id IN( 20, 50)
+ORDER BY last_name;
+
+
+TASK- 6
+SELECT last_name Employee, salary "Monthly Salary"
+FROM employees
+WHERE salary BETWEEN 5000 AND 12000
+AND department_id IN(20, 50);
+
+
+TASK-7
+SELECT last_name, hire_date
+FROM employees
+WHERE to_char(hire_date, 'fmYYYY') = 2006;
+
+
+TASK-8
+SELECT last_name, job_id
+FROM employees
+WHERE manager_id IS null;
+
+
+TASK-9
+SELECT last_name, salary, commission_pct
+FROM employees
+WHERE commission_pct IS NOT null
+ORDER BY 2 DESC, 3 DESC;
+
+
+TASK-10
+
+TASK-11
+
+
+TASK-12
+SELECT last_name
+FROM employees
+WHERE last_name LIKE '__a%';
+
+
+TASK-13
+SELECT last_name
+FROM employees
+WHERE last_name LIKE '%a%'
+AND last_name LIKE '%e%';
+
+
+TASK-14
+SELECT last_name, job_id, salary
+FROM employees
+WHERE job_id IN('SA_REP', 'ST_CLERK')
+AND salary NOT IN(2500,3500, 7000);
+
+
+TASK-15
+SELECT last_name, salary, commission_pct
+FROM employees
+WHERE commission_pct = 0.20;

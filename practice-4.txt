@@ -1,0 +1,51 @@
+TASK-1
+select sysdate "Date"
+from dual;
+
+
+TASK-2
+SELECT employee_id, last_name, salary, round(salary+salary*0.155) "New Salary"
+FROM employees;
+
+
+TASK-3
+SELECT employee_id, last_name, salary, round(salary+salary*0.155) "New Salary"
+FROM employees;
+
+
+TASK-4
+SELECT employee_id, last_name, salary, round(salary+salary*0.155) "New Salary", round(round(salary+ salary*0.155)- salary) "Increase"
+FROM employees;
+
+
+TASK-5 (a)
+SELECT initcap(last_name) "Name", length(last_name) "Length" 
+FROM employees
+WHERE last_name LIKE 'J%'
+OR last_name LIKE 'M%'
+OR last_name  LIKE 'A%'
+ORDER BY last_name;
+
+TASK-5 (b)
+
+TASK-5 (c)
+
+
+TASK-6
+SELECT last_name, round(months_between(sysdate, hire_date)) "Months_Worked"
+FROM employees
+order by "Months_Worked;
+
+
+TASK-7
+select last_name, lpad(salary, 15, '$')
+from employees;
+
+
+TASK-8
+
+TASK-9
+select last_name, trunc((sysdate-hire_date)/7) Tenure
+FROM employees
+where department_id = 90
+ order by Tenure desc;
